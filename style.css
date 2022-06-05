@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root {
+	--color2: #ea5959
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: var(--color2);
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	padding: 32px;
+	font-size: 18px;
+	font-weight: 300;
+}
+
+.todo {
+	padding: 32px;
+	background-color: #fff;
+	width: 90vw;
+}
+
+.todo_new {
+	--size: 50px;
+	display: flex;
+	margin: 16px 0 32px;
+	height: var(--size);
+}
+
+.todo_new input {
+	padding: 8px 16px;
+	margin-right: 16px;
+	font-size: 18px;
+	flex-grow: 1;
+}
+
+.todo_add, .todo_task_del {
+	color: #fff;
+	background-color:var(--color2);
+	cursor: pointer;
+	font-weight: 100;
+	font-size: 32px;
+	text-align: center;
+	line-height: var(--size);
+	width: var(--size);
+	height: var(--size);
+	border: 1px solid #000;
+}
+.todo_list > *:not(:last-child) {
+	margin-bottom: 8px;
+}
+.todo_task {
+	cursor: default;
+	--size: 36px;
+	display: flex;
+	align-items: center;
+	min-height: var(--size);
+}
+.todo_task:hover .todo_task_del {
+	display: block;
+}
+.todo_checkbox {
+	margin-right: 16px;
+}
+.todo_checkbox input {
+	display: none;
+}
+.todo_checkbox input:checked + div {
+	background-color: var(--color2);
+}
+.todo_checkbox input:checked + div:after {
+	display: block;
+}
+.todo_checkbox div {
+	color: #fff;
+	position: relative;
+	cursor: pointer;
+	--size: 28px;
+	height: var(--size);
+	width: var(--size);
+	border: 1px solid var(--color2);
+}
+.todo_checkbox div::after {
+	font-size: 1.3rem;
+	content: "✔";
+	text-align: center;
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.todo_task_text {
+	font-size: 1.2rem;
+}
+.todo_task_del {
+	display: none;
+	margin-left: auto;
+	margin-right: 0;
+}
