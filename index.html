@@ -14,26 +14,14 @@
 		<div class="todo_wrapper">
 			<h1 class="todo_title">Все задачи</h1>
 			<div class="todo_new">
-				<input type="text" placeholder="Новая задача">
-				<div class="todo_add">+</div>
+				<input id="new" type="text" placeholder="Новая задача">
+				<div id="add" class="todo_add">+</div>
 			</div>
-			<div class="todo_list">
-				<div class="todo_task">
-					<label class="todo_checkbox">
-						<input type="checkbox">
-						<div></div>
-					</label>
-					<div class="todo_task_text">kek</div>
-					<div class="todo_task_del">-</div>
-				</div>
-				<div class="todo_task">
-					<label class="todo_checkbox">
-						<input type="checkbox">
-						<div></div>
-					</label>
-					<div class="todo_task_text">kek</div>
-					<div class="todo_task_del">-</div>
-				</div>
+			<div class="todo_task_count">
+				<span>Всего задач:</span>
+				<strong id="count">0</strong>
+			</div>
+			<div id="tasks" class="todo_list">
 			</div>
 		</div>
 	</div>
